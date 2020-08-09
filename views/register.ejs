@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <style>
+      .container {
+        box-sizing: border-box;
+        box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5);
+        width: 35%;
+        justify-content: center;
+        margin: auto;
+        background-color: aqua;
+        margin-top: 20px;
+
+        border-radius: 5px;
+      }
+      div {
+        padding: 10px;
+      }
+      a {
+        float: right;
+        background-color: darkgray;
+        width: 100px;
+        border-radius: 5px;
+        height: 33px;
+        margin: auto;
+        padding-left: 25px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      a:hover {
+        text-decoration: none;
+        background-color: bisque;
+      }
+      input {
+        float: right;
+        border-radius: 5px;
+      }
+      h1 {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      button {
+        margin-top: 5px;
+        border-radius: 5px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <form action="/register" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Register</button><a href="/login">Login</a>
+      </form>
+    </div>
+  </body>
+</html>
