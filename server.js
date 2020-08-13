@@ -4,6 +4,8 @@ import articleRouter from "./routes/article.js";
 import Article from "./models/article.js";
 import methodOverride from "method-override";
 const app = express();
+app.use(express.static("public"));
+const users = [];
 mongoose
   .connect("mongodb://127.0.0.1:27017/blog", {
     useNewUrlParser: true,
@@ -23,5 +25,6 @@ app.get("/", async (req, res) => {
   const articles = await Article.find().sort({ createdAt: "desc" });
   res.render("articles/index", { articles: articles });
 });
+
 app.use("/articles", articleRouter);
 app.listen(5001);

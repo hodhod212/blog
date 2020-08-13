@@ -1,2 +1,4 @@
 /node_modules
 /.env
+/auth/node_modules
+/middleware/node_modules
